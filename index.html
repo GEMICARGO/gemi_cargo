@@ -1,0 +1,1624 @@
+<!doctype html>
+<html lang="ru" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Gemi Cargo — Международная морская и мультимодальная логистика
+    </title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Google Fonts Inter & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                800: "#0B192C",
+                900: "#070F1E",
+                950: "#030712",
+              },
+              ocean: {
+                500: "#0088CC",
+                600: "#0066A2",
+                700: "#004B7A",
+              },
+              amber: {
+                500: "#FF9F1C",
+                600: "#E08300",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-panel {
+        background: rgba(11, 25, 44, 0.85);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+      .glass-card {
+        background: linear-gradient(
+          135deg,
+          rgba(255, 255, 255, 0.08) 0%,
+          rgba(255, 255, 255, 0.02) 100%
+        );
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .glass-card:hover {
+        border-color: rgba(0, 180, 216, 0.5);
+        box-shadow: 0 10px 30px -10px rgba(0, 180, 216, 0.3);
+      }
+      .hero-bg {
+        background:
+          linear-gradient(
+            to bottom,
+            rgba(7, 15, 30, 0.8),
+            rgba(3, 7, 18, 0.95)
+          ),
+          url("https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=2000&q=80")
+            center/cover no-repeat;
+      }
+      .text-gradient {
+        background: linear-gradient(
+          135deg,
+          #38bdf8 0%,
+          #3b82f6 50%,
+          #6366f1 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 4px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: rgba(15, 23, 42, 0.6);
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #0284c7;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-navy-950 text-slate-100 font-sans selection:bg-ocean-500 selection:text-white antialiased overflow-x-hidden"
+  >
+    <!-- Top Contact Bar -->
+    <div
+      class="bg-navy-900 border-b border-slate-800 text-[11px] sm:text-xs py-2 px-3 sm:px-4 sticky top-0 z-50"
+    >
+      <div
+        class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left"
+      >
+        <div class="flex items-center justify-center gap-3 flex-wrap">
+          <span class="flex items-center gap-1 text-slate-300">
+            <i class="fa-solid fa-anchor text-cyan-400"></i>
+            <span class="font-semibold text-white">Порты:</span> Поти & Батуми
+          </span>
+          <span class="hidden md:inline-block text-slate-600">|</span>
+          <span class="hidden sm:flex items-center gap-1 text-slate-300">
+            <i class="fa-solid fa-headset text-cyan-400"></i>
+            <span>Отдел логистики</span>
+          </span>
+        </div>
+
+        <div class="flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+          <!-- Georgia Contacts -->
+          <a
+            href="tel:+995591272339"
+            class="hover:text-cyan-400 transition flex items-center gap-1"
+          >
+            <span>🇬🇪</span> +995 591 272 339
+          </a>
+          <!-- Russia Contacts -->
+          <span class="text-slate-600 hidden xs:inline">|</span>
+          <a
+            href="tel:+79618552901"
+            class="hover:text-cyan-400 transition flex items-center gap-1"
+          >
+            <span>🇷🇺</span> +7 (961) 855-29-01
+          </a>
+
+          <!-- Messengers Links -->
+          <div class="flex items-center gap-1.5 ml-1">
+            <a
+              href="https://wa.me/995591272339"
+              target="_blank"
+              class="bg-emerald-600 hover:bg-emerald-500 text-white px-2 py-0.5 rounded-md font-semibold flex items-center gap-1 transition text-[10px]"
+            >
+              <i class="fab fa-whatsapp"></i> WA
+            </a>
+            <a
+              href="https://max.ru"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-500 text-white px-2 py-0.5 rounded-md font-semibold flex items-center gap-1 transition text-[10px]"
+            >
+              <i class="fa-solid fa-comments"></i> Макс
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Header -->
+    <header
+      class="glass-panel sticky top-[45px] sm:top-[33px] z-40 transition-all duration-300"
+    >
+      <div
+        class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center"
+      >
+        <!-- Brand Logo -->
+        <a href="#" class="flex items-center gap-2 sm:gap-3 group">
+          <div
+            class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white text-lg sm:text-xl font-black shadow-lg shadow-cyan-500/20"
+          >
+            <i class="fa-solid fa-ship"></i>
+          </div>
+          <div>
+            <span
+              class="font-heading font-black text-xl sm:text-2xl tracking-wider text-white block leading-none"
+              >GEMI<span class="text-cyan-400">CARGO</span></span
+            >
+            <span
+              class="text-[9px] sm:text-[10px] text-slate-400 tracking-widest uppercase font-semibold"
+              >ГЕМИ КАРГО LOGISTICS</span
+            >
+          </div>
+        </a>
+
+        <!-- Navigation Links (Desktop) -->
+        <nav class="hidden lg:flex items-center gap-8 font-medium text-sm">
+          <a href="#services" class="hover:text-cyan-400 transition">Услуги</a>
+          <a href="#destinations" class="hover:text-cyan-400 transition"
+            >География</a
+          >
+          <a href="#calculator" class="hover:text-cyan-400 transition"
+            >Расчет стоимости</a
+          >
+          <a href="#contacts" class="hover:text-cyan-400 transition"
+            >Контакты</a
+          >
+        </nav>
+
+        <!-- Action Buttons -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <a
+            href="#calculator"
+            class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-semibold text-xs sm:text-sm px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-xl transition shadow-lg shadow-cyan-500/25 flex items-center gap-1.5"
+          >
+            <i class="fa-solid fa-calculator"></i>
+            <span class="hidden xs:inline">Расчет фрахта</span>
+            <span class="xs:hidden">Расчет</span>
+          </a>
+          <button
+            id="mobileMenuBtn"
+            class="lg:hidden text-xl sm:text-2xl text-slate-300 hover:text-white p-2"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu Dropdown -->
+      <div
+        id="mobileMenu"
+        class="hidden lg:hidden bg-navy-900 border-b border-slate-800 px-5 py-4 space-y-3 shadow-xl"
+      >
+        <a
+          href="#services"
+          onclick="toggleMobileMenu()"
+          class="block py-2 text-slate-200 hover:text-cyan-400 font-medium text-sm border-b border-slate-800/60"
+          >Услуги & Направления</a
+        >
+        <a
+          href="#destinations"
+          onclick="toggleMobileMenu()"
+          class="block py-2 text-slate-200 hover:text-cyan-400 font-medium text-sm border-b border-slate-800/60"
+          >География поставок</a
+        >
+        <a
+          href="#calculator"
+          onclick="toggleMobileMenu()"
+          class="block py-2 text-slate-200 hover:text-cyan-400 font-medium text-sm border-b border-slate-800/60"
+          >Калькулятор фрахта</a
+        >
+        <a
+          href="#contacts"
+          onclick="toggleMobileMenu()"
+          class="block py-2 text-slate-200 hover:text-cyan-400 font-medium text-sm"
+          >Контакты и связь</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="hero-bg relative min-h-[85vh] sm:min-h-[90vh] flex items-center pt-6 sm:pt-8 pb-12 sm:pb-16 px-4 overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto w-full relative z-10">
+        <div class="max-w-3xl mb-8 sm:mb-10">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[11px] sm:text-xs font-semibold mb-4 backdrop-blur-md"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"
+            ></span>
+            Прямой транзитный коридор: Турция • Китай • Индия ➔ Грузия ➔ РФ/СНГ
+          </div>
+          <h1
+            class="font-heading font-black text-2.5xl xs:text-3xl sm:text-5xl lg:text-6xl text-white leading-tight mb-4 sm:mb-6"
+          >
+            Международные
+            <span class="text-gradient">контейнерные перевозки</span> через Поти
+            и Батуми
+          </h1>
+          <p class="text-slate-300 text-sm sm:text-lg mb-6 leading-relaxed">
+            Полный комплекс экспедиторских и транспортных услуг «под ключ» (DOOR
+            TO DOOR) из Турции, Китая, ОАЭ и Индии в Россию, Казахстан,
+            Узбекистан, Киргизию и Таджикистан.
+          </p>
+          <div class="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4">
+            <a
+              href="#calculator"
+              class="bg-amber-500 hover:bg-amber-600 text-navy-950 font-bold px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl transition shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2 text-sm sm:text-base text-center"
+            >
+              <span>Запросить предложение</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <!-- Hero Messenger Buttons: WhatsApp & Max Messenger -->
+            <div class="grid grid-cols-2 gap-2 sm:flex sm:flex-wrap">
+              <a
+                href="https://wa.me/995591272339?text=Здравствуйте,%20интересует%20расчет%20доставки"
+                target="_blank"
+                class="glass-card hover:bg-emerald-900/20 text-white font-semibold px-3.5 py-3 rounded-xl transition flex items-center justify-center gap-2 border border-emerald-500/30 text-xs sm:text-sm"
+              >
+                <i class="fab fa-whatsapp text-emerald-400 text-base"></i>
+                <span>WhatsApp</span>
+              </a>
+              <a
+                href="https://max.ru"
+                target="_blank"
+                class="glass-card hover:bg-blue-900/20 text-white font-semibold px-3.5 py-3 rounded-xl transition flex items-center justify-center gap-2 border border-blue-500/30 text-xs sm:text-sm"
+              >
+                <i class="fa-solid fa-comments text-blue-400 text-base"></i>
+                <span>Макс</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Compact Interactive Grid Cards -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 mt-6 sm:mt-8"
+        >
+          <!-- Card 1 -->
+          <div
+            onclick="openServiceModal('rail')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-train"></i>
+              </div>
+              <span
+                class="text-xs text-slate-400 group-hover:text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Ж/Д Перевозки из Грузии
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Отправка крытыми вагонами, полувагонами и платформой из
+              Поти/Батуми в РФ, Казахстан и СНГ.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            onclick="openServiceModal('auto')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-truck-front"></i>
+              </div>
+              <span
+                class="text-xs text-slate-400 group-hover:text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Автоперевозки Грузия – РФ
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Контейнеровозы, тенты, рефрижераторы. Быстрый транзит от 2-х дней
+              из Турции через коридор.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            onclick="openServiceModal('sea')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-ship"></i>
+              </div>
+              <span
+                class="text-xs text-slate-400 group-hover:text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Морской фрахт & Контейнеры
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Прямые сервисы 20ft/40ft/40HC из Китая, Индии, Турции, ОАЭ, Африки
+              и Латинской Америки.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            onclick="openServiceModal('poti')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-warehouse"></i>
+              </div>
+              <span
+                class="text-xs text-slate-400 group-hover:text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Портовое экспедирование
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Полное внутрипортовое сопровождение в Поти и Батуми, перевалка,
+              расформирование и транзит.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div
+            onclick="openServiceModal('bulk')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-purple-500/20 text-purple-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-boxes-stacked"></i>
+              </div>
+              <span
+                class="text-xs text-slate-400 group-hover:text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Навалочные & Судовые партии
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Импорт и экспорт генеральных и навалочных грузов судовыми партиями
+              через черноморские порты.
+            </p>
+          </div>
+
+          <!-- Card 6 -->
+          <div
+            onclick="openServiceModal('doortodoor')"
+            class="glass-card p-4 sm:p-5 rounded-2xl cursor-pointer group hover:-translate-y-1 transition duration-300 relative overflow-hidden border border-cyan-500/30"
+          >
+            <div class="flex justify-between items-start mb-2 sm:mb-3">
+              <div
+                class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-rose-500/20 text-rose-400 flex items-center justify-center text-xl sm:text-2xl group-hover:scale-110 transition"
+              >
+                <i class="fa-solid fa-truck-ramp-box"></i>
+              </div>
+              <span
+                class="text-xs text-cyan-400 flex items-center gap-1 font-medium"
+              >
+                Подробнее <i class="fa-solid fa-chevron-right text-[9px]"></i>
+              </span>
+            </div>
+            <h3
+              class="font-heading font-bold text-base sm:text-lg text-white mb-1.5 sm:mb-2 group-hover:text-cyan-300 transition"
+            >
+              Сервис DOOR TO DOOR
+            </h3>
+            <p class="text-slate-400 text-xs line-clamp-2">
+              Доставка «от двери до двери» с сюрвейерским контролем, маркировкой
+              ТР ТС и пломбированием.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Freight Calculator Section -->
+    <section
+      id="calculator"
+      class="py-14 sm:py-20 px-4 bg-navy-900/80 relative"
+    >
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
+          <span
+            class="text-cyan-400 font-semibold text-xs sm:text-sm uppercase tracking-widest"
+            >Онлайн-расчет</span
+          >
+          <h2
+            class="font-heading font-extrabold text-2.5xl sm:text-4xl text-white mt-1"
+          >
+            Интерактивный Калькулятор Доставки
+          </h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-2">
+            Укажите параметры вашей отправки для моментального расчета сроков и
+            ориентировочной стоимости
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start"
+        >
+          <!-- Form Inputs (8 cols) -->
+          <div
+            class="lg:col-span-8 glass-panel p-5 sm:p-8 rounded-3xl border border-slate-700/60 shadow-2xl"
+          >
+            <form
+              id="freightForm"
+              onsubmit="calculateQuote(event)"
+              class="space-y-5 sm:space-y-6"
+            >
+              <!-- Route Selection -->
+              <div>
+                <label
+                  class="block text-slate-300 text-xs font-semibold uppercase mb-2"
+                  >Маршрут перевозки</label
+                >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                  <div>
+                    <span class="text-xs text-slate-400 mb-1 block"
+                      >Откуда:</span
+                    >
+                    <select
+                      id="origin"
+                      class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 sm:px-4 py-3 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition"
+                    >
+                      <option value="Turkey">
+                        Турция (Стамбул / Мерсин / Измир)
+                      </option>
+                      <option value="China">
+                        Китай (Нинбо / Шанхай / Шэньчжэнь)
+                      </option>
+                      <option value="India">Индия (Мундра / Нава-Шева)</option>
+                      <option value="UAE">ОАЭ (Джебель-Али)</option>
+                      <option value="EU">Страны Евросоюза</option>
+                      <option value="Georgia">
+                        Грузия (Порты Поти / Батуми)
+                      </option>
+                    </select>
+                  </div>
+                  <div>
+                    <span class="text-xs text-slate-400 mb-1 block">Куда:</span>
+                    <select
+                      id="destination"
+                      class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 sm:px-4 py-3 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition"
+                    >
+                      <option value="Russia">
+                        Россия (Москва / Регионы РФ)
+                      </option>
+                      <option value="Kazakhstan">
+                        Казахстан (Алматы / Астана)
+                      </option>
+                      <option value="Uzbekistan">Узбекистан (Ташкент)</option>
+                      <option value="Kyrgyzstan">Киргизия (Бишкек)</option>
+                      <option value="Tajikistan">Таджикистан (Душанбе)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Transport & Equipment Type -->
+              <div>
+                <label
+                  class="block text-slate-300 text-xs font-semibold uppercase mb-2"
+                  >Вид транспорта / Контейнер</label
+                >
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="transportType"
+                      value="20ft"
+                      checked
+                      class="peer hidden"
+                      onchange="updateCalc()"
+                    />
+                    <div
+                      class="border border-slate-700 rounded-xl p-2.5 sm:p-3 text-center peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 transition"
+                    >
+                      <i
+                        class="fa-solid fa-box text-lg sm:text-xl mb-1 block text-cyan-400"
+                      ></i>
+                      <span
+                        class="text-[11px] sm:text-xs font-semibold block text-slate-200"
+                        >20ft Контейнер</span
+                      >
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="transportType"
+                      value="40ft"
+                      class="peer hidden"
+                      onchange="updateCalc()"
+                    />
+                    <div
+                      class="border border-slate-700 rounded-xl p-2.5 sm:p-3 text-center peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 transition"
+                    >
+                      <i
+                        class="fa-solid fa-boxes-packing text-lg sm:text-xl mb-1 block text-blue-400"
+                      ></i>
+                      <span
+                        class="text-[11px] sm:text-xs font-semibold block text-slate-200"
+                        >40ft HC</span
+                      >
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="transportType"
+                      value="truck"
+                      class="peer hidden"
+                      onchange="updateCalc()"
+                    />
+                    <div
+                      class="border border-slate-700 rounded-xl p-2.5 sm:p-3 text-center peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 transition"
+                    >
+                      <i
+                        class="fa-solid fa-truck-front text-lg sm:text-xl mb-1 block text-emerald-400"
+                      ></i>
+                      <span
+                        class="text-[11px] sm:text-xs font-semibold block text-slate-200"
+                        >Автофура (FTL)</span
+                      >
+                    </div>
+                  </label>
+
+                  <label class="cursor-pointer">
+                    <input
+                      type="radio"
+                      name="transportType"
+                      value="rail"
+                      class="peer hidden"
+                      onchange="updateCalc()"
+                    />
+                    <div
+                      class="border border-slate-700 rounded-xl p-2.5 sm:p-3 text-center peer-checked:border-cyan-500 peer-checked:bg-cyan-500/10 transition"
+                    >
+                      <i
+                        class="fa-solid fa-train text-lg sm:text-xl mb-1 block text-amber-400"
+                      ></i>
+                      <span
+                        class="text-[11px] sm:text-xs font-semibold block text-slate-200"
+                        >Ж/Д Вагон</span
+                      >
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Weight & Volume Inputs -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                <div>
+                  <label
+                    class="block text-slate-300 text-xs font-semibold uppercase mb-1"
+                    >Вес брутто (тонн)</label
+                  >
+                  <input
+                    type="number"
+                    id="cargoWeight"
+                    min="1"
+                    max="10000"
+                    value="18"
+                    oninput="updateCalc()"
+                    class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 sm:px-4 py-3 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-slate-300 text-xs font-semibold uppercase mb-1"
+                    >Объем (м³)</label
+                  >
+                  <input
+                    type="number"
+                    id="cargoVolume"
+                    min="1"
+                    max="1000"
+                    value="35"
+                    oninput="updateCalc()"
+                    class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 sm:px-4 py-3 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition"
+                  />
+                </div>
+              </div>
+
+              <!-- Additional Services Checkboxes -->
+              <div>
+                <label
+                  class="block text-slate-300 text-xs font-semibold uppercase mb-2"
+                  >Дополнительные опции</label
+                >
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 sm:gap-3">
+                  <label
+                    class="flex items-center gap-2 cursor-pointer bg-navy-950/60 p-3 rounded-xl border border-slate-800"
+                  >
+                    <input
+                      type="checkbox"
+                      id="optSurveyor"
+                      checked
+                      class="rounded border-slate-700 text-cyan-500 focus:ring-0"
+                    />
+                    <span class="text-xs text-slate-300">Сюрвейер в порту</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-2 cursor-pointer bg-navy-950/60 p-3 rounded-xl border border-slate-800"
+                  >
+                    <input
+                      type="checkbox"
+                      id="optMarking"
+                      checked
+                      class="rounded border-slate-700 text-cyan-500 focus:ring-0"
+                    />
+                    <span class="text-xs text-slate-300">Маркировка ТР ТС</span>
+                  </label>
+                  <label
+                    class="flex items-center gap-2 cursor-pointer bg-navy-950/60 p-3 rounded-xl border border-slate-800"
+                  >
+                    <input
+                      type="checkbox"
+                      id="optCustoms"
+                      checked
+                      class="rounded border-slate-700 text-cyan-500 focus:ring-0"
+                    />
+                    <span class="text-xs text-slate-300"
+                      >Таможенный транзит</span
+                    >
+                  </label>
+                </div>
+              </div>
+
+              <!-- Contact Input -->
+              <div>
+                <label
+                  class="block text-slate-300 text-xs font-semibold uppercase mb-1"
+                  >Ваше имя и телефон / мессенджер</label
+                >
+                <input
+                  type="text"
+                  id="clientContact"
+                  placeholder="+7 / +995 (ваш телефон)"
+                  required
+                  class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3.5 sm:px-4 py-3 text-slate-200 text-xs sm:text-sm focus:outline-none focus:border-cyan-500 transition"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <button
+                  type="submit"
+                  class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 hover:to-teal-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-500/25 transition flex items-center justify-center gap-2 text-xs sm:text-sm"
+                >
+                  <i class="fab fa-whatsapp text-lg"></i>
+                  <span>Отправить в WhatsApp</span>
+                </button>
+                <button
+                  type="button"
+                  onclick="sendToMaxMessenger(event)"
+                  class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-blue-500/25 transition flex items-center justify-center gap-2 text-xs sm:text-sm"
+                >
+                  <i class="fa-solid fa-comments text-lg"></i>
+                  <span>Отправить в Макс</span>
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Estimation Output Box (4 cols) -->
+          <div
+            class="lg:col-span-4 glass-panel p-5 sm:p-6 rounded-3xl border border-cyan-500/30 sticky top-28"
+          >
+            <div class="border-b border-slate-700/80 pb-3 sm:pb-4 mb-3 sm:mb-4">
+              <span class="text-xs uppercase text-slate-400 font-medium"
+                >Оценка перевозки</span
+              >
+              <h3
+                class="text-lg sm:text-xl font-heading font-bold text-white mt-1"
+              >
+                Предварительный расчет
+              </h3>
+            </div>
+
+            <div class="space-y-3.5 sm:space-y-4">
+              <div>
+                <span class="text-xs text-slate-400 block"
+                  >Ориентировочные сроки транзита:</span
+                >
+                <span
+                  id="calcDays"
+                  class="text-xl sm:text-2xl font-bold text-cyan-400"
+                  >12 – 18 дней</span
+                >
+              </div>
+
+              <div>
+                <span class="text-xs text-slate-400 block"
+                  >Маршрут следования:</span
+                >
+                <span
+                  id="calcRoute"
+                  class="text-xs sm:text-sm font-semibold text-slate-200"
+                  >Турция ➔ Поти/Батуми ➔ Россия</span
+                >
+              </div>
+
+              <div>
+                <span class="text-xs text-slate-400 block"
+                  >Ориентировочная стоимость:</span
+                >
+                <span
+                  id="calcPrice"
+                  class="text-2xl sm:text-3xl font-extrabold text-amber-400"
+                  >по запросу</span
+                >
+                <span
+                  class="text-[10px] sm:text-[11px] text-slate-400 block mt-1"
+                  >*Точная стоимость фиксируется в ставке-счете после уточнения
+                  наименования груза</span
+                >
+              </div>
+
+              <div
+                class="bg-navy-950/80 p-3.5 sm:p-4 rounded-2xl border border-slate-800 space-y-2 text-xs"
+              >
+                <div
+                  class="flex items-center gap-2 text-emerald-400 font-medium"
+                >
+                  <i class="fa-solid fa-circle-check"></i> Включен бесплатный
+                  простой 5 дней
+                </div>
+                <div
+                  class="flex items-center gap-2 text-emerald-400 font-medium"
+                >
+                  <i class="fa-solid fa-circle-check"></i> Прямой договор без
+                  посредников
+                </div>
+                <div
+                  class="flex items-center gap-2 text-emerald-400 font-medium"
+                >
+                  <i class="fa-solid fa-circle-check"></i> Контроль целостности
+                  пломб
+                </div>
+              </div>
+
+              <div class="pt-1">
+                <p class="text-[11px] text-slate-400 text-center">
+                  Нужен мгновенный ответ? Звоните нам напрямую:
+                  <a
+                    href="tel:+995591272339"
+                    class="text-cyan-400 font-bold block mt-1 hover:underline"
+                    >+995 591 272 339</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detailed Modal Window for Services -->
+    <div
+      id="serviceModal"
+      class="fixed inset-0 z-50 hidden flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-md"
+    >
+      <div
+        class="glass-panel w-full max-w-3xl rounded-3xl border border-slate-700 shadow-2xl max-h-[85vh] flex flex-col overflow-hidden animate-fade-in"
+      >
+        <!-- Modal Header -->
+        <div
+          class="p-4 sm:p-6 border-b border-slate-700 flex justify-between items-center bg-navy-900"
+        >
+          <div class="flex items-center gap-3">
+            <div
+              id="modalIcon"
+              class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-lg sm:text-xl"
+            >
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <h3
+              id="modalTitle"
+              class="font-heading font-bold text-base sm:text-xl text-white"
+            >
+              Детали услуги
+            </h3>
+          </div>
+          <button
+            onclick="closeServiceModal()"
+            class="text-slate-400 hover:text-white text-xl sm:text-2xl p-2 rounded-lg hover:bg-slate-800 transition"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Modal Body (Scrollable) -->
+        <div
+          id="modalContent"
+          class="p-4 sm:p-8 space-y-4 sm:space-y-6 overflow-y-auto custom-scrollbar text-slate-300 text-xs sm:text-sm leading-relaxed"
+        >
+          <!-- Injected via JavaScript -->
+        </div>
+
+        <!-- Modal Footer -->
+        <div
+          class="p-4 sm:p-5 border-t border-slate-800 bg-navy-950 flex flex-wrap justify-between items-center gap-3"
+        >
+          <div class="text-[11px] sm:text-xs text-slate-400 hidden xs:block">
+            Связаться в мессенджерах: <strong>WhatsApp / Макс</strong>
+          </div>
+          <div class="flex gap-2 w-full xs:w-auto justify-end">
+            <button
+              onclick="closeServiceModal()"
+              class="px-3 py-2 rounded-xl text-slate-400 hover:text-white text-xs font-semibold"
+            >
+              Закрыть
+            </button>
+            <a
+              href="https://wa.me/995591272339?text=Здравствуйте,%20хочу%20уточнить%20детали"
+              target="_blank"
+              class="bg-emerald-600 hover:bg-emerald-500 text-white font-semibold px-3.5 py-2.5 rounded-xl text-xs flex items-center gap-1.5 transition"
+            >
+              <i class="fab fa-whatsapp"></i> WA
+            </a>
+            <a
+              href="https://max.ru"
+              target="_blank"
+              class="bg-blue-600 hover:bg-blue-500 text-white font-semibold px-3.5 py-2.5 rounded-xl text-xs flex items-center gap-1.5 transition"
+            >
+              <i class="fa-solid fa-comments"></i> Макс
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed Company & Network Information Section -->
+    <section id="services" class="py-14 sm:py-20 px-4 bg-navy-950">
+      <div class="max-w-7xl mx-auto space-y-12 sm:space-y-16">
+        <!-- Main Door-To-Door Spotlight -->
+        <div
+          class="glass-panel p-6 sm:p-12 rounded-3xl border border-slate-700/80 relative overflow-hidden"
+        >
+          <div
+            class="absolute -right-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"
+          ></div>
+          <div class="max-w-3xl">
+            <span
+              class="text-cyan-400 font-semibold text-xs uppercase tracking-widest"
+              >Флагманский сервис</span
+            >
+            <h2
+              class="font-heading font-extrabold text-xl sm:text-4xl text-white mt-2 mb-3 sm:mb-4"
+            >
+              Сквозной сервис DOOR TO DOOR через Поти и Батуми
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+              Компания «Геми Карго» обеспечивает безупречную доставку грузов из
+              стран Азии, Ближнего Востока и Европы до конечного склада
+              получателя в России, Казахстане и Средней Азии.
+            </p>
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 text-xs text-slate-300 mb-2"
+            >
+              <div
+                class="flex items-start gap-3 bg-navy-900/60 p-3.5 sm:p-4 rounded-xl border border-slate-800"
+              >
+                <i
+                  class="fa-solid fa-clock-rotate-left text-cyan-400 text-lg mt-0.5"
+                ></i>
+                <div>
+                  <strong class="text-white block font-semibold mb-0.5"
+                    >Экспресс транзит от 2 дней</strong
+                  >
+                  Доставка из портов Турции в Грузию и далее автотранспортом до
+                  границы РФ за минимальные сроки.
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-3 bg-navy-900/60 p-3.5 sm:p-4 rounded-xl border border-slate-800"
+              >
+                <i class="fa-solid fa-stamp text-amber-400 text-lg mt-0.5"></i>
+                <div>
+                  <strong class="text-white block font-semibold mb-0.5"
+                    >Маркировка ТР ТС</strong
+                  >
+                  Согласование и нанесение стикеров ТР ТС на промежуточных
+                  терминалах в Поти/Батуми до таможни.
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-3 bg-navy-900/60 p-3.5 sm:p-4 rounded-xl border border-slate-800"
+              >
+                <i
+                  class="fa-solid fa-user-shield text-emerald-400 text-lg mt-0.5"
+                ></i>
+                <div>
+                  <strong class="text-white block font-semibold mb-0.5"
+                    >Сюрвейерский контроль</strong
+                  >
+                  Осмотр контейнеров, пломбирование, фото/видеоотчет и инспекция
+                  крепления груза на каждом этапе.
+                </div>
+              </div>
+              <div
+                class="flex items-start gap-3 bg-navy-900/60 p-3.5 sm:p-4 rounded-xl border border-slate-800"
+              >
+                <i class="fa-solid fa-gears text-purple-400 text-lg mt-0.5"></i>
+                <div>
+                  <strong class="text-white block font-semibold mb-0.5"
+                    >Сложное оборудование</strong
+                  >
+                  Перевозка тяжеловесных станков, негабаритных агрегатов на
+                  спецплатформах Flatrack и Open Top.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Import/Export Specific Solutions -->
+        <div
+          id="destinations"
+          class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8"
+        >
+          <!-- For Russian Importers -->
+          <div
+            class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-blue-500/20 text-blue-400 flex items-center justify-center text-2xl mb-5 sm:mb-6"
+            >
+              <i class="fa-solid fa-passport"></i>
+            </div>
+            <h3
+              class="font-heading font-bold text-xl sm:text-2xl text-white mb-3"
+            >
+              Для импортеров и экспортеров РФ
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              Оптимальные маршруты в обход загруженных дальневосточных
+              коридоров. Перевалка грузов через грузинский морской узел
+              позволяет гарантировать четкие сроки прибытия в Центральную
+              Россию, Юг и Поволжье.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Прямые Ж/Д
+                отправки в крытых вагонах из Поти
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Транзит под
+                пломбой без риска повреждения груза
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-cyan-400"></i> Оформление
+                полного пакета документов
+              </li>
+            </ul>
+          </div>
+
+          <!-- For CIS Importers -->
+          <div
+            class="glass-card p-6 sm:p-8 rounded-3xl border border-slate-800"
+          >
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-500/20 text-amber-400 flex items-center justify-center text-2xl mb-5 sm:mb-6"
+            >
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3
+              class="font-heading font-bold text-xl sm:text-2xl text-white mb-3"
+            >
+              Казахстан и Средняя Азия
+            </h3>
+            <p class="text-slate-300 text-xs sm:text-sm leading-relaxed mb-4">
+              Регулярные мультимодальные отправки в Казахстан (Алматы, Астана),
+              Узбекистан (Ташкент), Киргизию и Таджикистан.
+            </p>
+            <ul class="space-y-2 text-xs text-slate-300">
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i> Перевалка с
+                моря на Ж/Д платформы 1520 мм
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i> Накопление и
+                хранение на портовых терминалах
+              </li>
+              <li class="flex items-center gap-2">
+                <i class="fa-solid fa-check text-amber-400"></i> Отправка
+                судовых партий навалом и генеральных грузов
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI Logistics Assistant Floating Widget -->
+    <div class="fixed bottom-5 right-5 z-50">
+      <!-- Trigger Button -->
+      <button
+        id="aiChatToggle"
+        onclick="toggleAIChat()"
+        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 text-white flex items-center justify-center text-xl sm:text-2xl shadow-2xl hover:scale-110 transition duration-300 border-2 border-white/20 relative group"
+      >
+        <i class="fa-solid fa-robot"></i>
+        <span
+          class="absolute -top-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 bg-emerald-400 rounded-full border-2 border-navy-950"
+        ></span>
+      </button>
+
+      <!-- Chat Window Panel -->
+      <div
+        id="aiChatPanel"
+        class="hidden absolute bottom-16 right-0 w-[88vw] max-w-85 sm:w-96 glass-panel rounded-3xl border border-slate-700 shadow-2xl flex flex-col overflow-hidden animate-fade-in"
+      >
+        <!-- Chat Header -->
+        <div
+          class="bg-navy-900 p-3.5 sm:p-4 border-b border-slate-800 flex justify-between items-center"
+        >
+          <div class="flex items-center gap-2.5">
+            <div
+              class="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-sm sm:text-base"
+            >
+              <i class="fa-solid fa-robot"></i>
+            </div>
+            <div>
+              <h4 class="font-heading font-bold text-xs sm:text-sm text-white">
+                ИИ-Логист Геми Карго
+              </h4>
+              <span
+                class="text-[9px] sm:text-[10px] text-emerald-400 flex items-center gap-1"
+              >
+                <span
+                  class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"
+                ></span>
+                Онлайн 24/7
+              </span>
+            </div>
+          </div>
+          <button
+            onclick="toggleAIChat()"
+            class="text-slate-400 hover:text-white text-lg"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+
+        <!-- Chat Messages Log -->
+        <div
+          id="chatMessages"
+          class="p-3.5 sm:p-4 space-y-3 h-64 sm:h-72 overflow-y-auto custom-scrollbar text-xs"
+        >
+          <div
+            class="bg-navy-900 p-3 rounded-2xl rounded-tl-none border border-slate-800 text-slate-300"
+          >
+            Здравствуйте! Я виртуальный ассистент компании «Геми Карго». Вы
+            можете связаться с нами через WhatsApp или мессенджер Макс. Задайте
+            любой вопрос!
+          </div>
+        </div>
+
+        <!-- Preset Buttons -->
+        <div
+          class="p-2 bg-navy-950/80 border-t border-slate-800 flex gap-1.5 overflow-x-auto text-[10px] custom-scrollbar"
+        >
+          <button
+            onclick="sendPresetQuery('Сроки через Поти?')"
+            class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full whitespace-nowrap"
+          >
+            ⏱ Сроки Поти?
+          </button>
+          <button
+            onclick="sendPresetQuery('Что с ТР ТС?')"
+            class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full whitespace-nowrap"
+          >
+            🏷 Маркировка ТР ТС
+          </button>
+          <button
+            onclick="sendPresetQuery('Как написать в Макс?')"
+            class="bg-slate-800 hover:bg-slate-700 text-slate-300 px-2.5 py-1 rounded-full whitespace-nowrap"
+          >
+            💬 Мессенджер Макс
+          </button>
+        </div>
+
+        <!-- Chat Input -->
+        <form
+          onsubmit="handleUserChatMessage(event)"
+          class="p-2.5 sm:p-3 bg-navy-900 border-t border-slate-800 flex gap-2"
+        >
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Напишите вопрос..."
+            class="w-full bg-navy-950 border border-slate-700 rounded-xl px-3 py-2 text-slate-200 text-xs focus:outline-none focus:border-cyan-500"
+          />
+          <button
+            type="submit"
+            class="bg-cyan-500 hover:bg-cyan-400 text-navy-950 px-3 py-2 rounded-xl font-bold transition"
+          >
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer / Contact Section -->
+    <footer
+      id="contacts"
+      class="bg-navy-900 border-t border-slate-800 text-slate-400 text-xs pt-12 sm:pt-16 pb-8 px-4"
+    >
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12"
+      >
+        <!-- Col 1: Brand Info -->
+        <div>
+          <a href="#" class="flex items-center gap-3 mb-4">
+            <div
+              class="w-8 h-8 rounded-lg bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center text-white text-base font-black"
+            >
+              <i class="fa-solid fa-ship"></i>
+            </div>
+            <span class="font-heading font-black text-xl text-white"
+              >GEMI<span class="text-cyan-400">CARGO</span></span
+            >
+          </a>
+          <p class="text-slate-400 leading-relaxed mb-4">
+            Международный экспедитор и оператор мультимодальных контейнерных
+            перевозок через черноморские порты Грузия (Поти / Батуми).
+          </p>
+          <div class="flex gap-3 text-lg">
+            <a
+              href="https://wa.me/995591272339"
+              target="_blank"
+              class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center hover:bg-emerald-500 hover:text-white transition"
+              title="WhatsApp"
+            >
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a
+              href="https://max.ru"
+              target="_blank"
+              class="w-8 h-8 rounded-lg bg-blue-500/20 text-blue-400 flex items-center justify-center hover:bg-blue-500 hover:text-white transition"
+              title="Мессенджер Макс"
+            >
+              <i class="fa-solid fa-comments"></i>
+            </a>
+            <a
+              href="mailto:info@gemocargo.com"
+              class="w-8 h-8 rounded-lg bg-cyan-500/20 text-cyan-400 flex items-center justify-center hover:bg-cyan-500 hover:text-white transition"
+              title="Email"
+            >
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Contacts Georgia -->
+        <div>
+          <h4
+            class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-3 sm:mb-4 border-b border-slate-800 pb-2"
+          >
+            🇬🇪 Офис и Терминал в Грузии
+          </h4>
+          <ul class="space-y-2.5">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-location-dot text-cyan-400 mt-0.5"></i>
+              <span>Портовая зона Поти / Батуми, Грузия</span>
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-cyan-400"></i>
+              <a href="tel:+995591272339" class="hover:text-white transition"
+                >+995 591 272 339</a
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-cyan-400"></i>
+              <a href="tel:+995599043733" class="hover:text-white transition"
+                >+995 599 043 733</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contacts Russia & CIS -->
+        <div>
+          <h4
+            class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-3 sm:mb-4 border-b border-slate-800 pb-2"
+          >
+            🇷🇺 Представительство в РФ
+          </h4>
+          <ul class="space-y-2.5">
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <a href="tel:+79618552901" class="hover:text-white transition"
+                >+7 (961) 855-29-01</a
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <a href="tel:+79184333626" class="hover:text-white transition"
+                >+7 (918) 433-36-26</a
+              >
+            </li>
+            <li class="flex items-center gap-2">
+              <i class="fa-solid fa-envelope text-slate-400"></i>
+              <a
+                href="mailto:info@gemocargo.com"
+                class="hover:text-white transition"
+                >info@gemocargo.com</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Quick Navigation & Messenger Support -->
+        <div>
+          <h4
+            class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-3 sm:mb-4 border-b border-slate-800 pb-2"
+          >
+            Мессенджеры и связь
+          </h4>
+          <div class="space-y-2 mb-4">
+            <a
+              href="https://wa.me/995591272339"
+              target="_blank"
+              class="block bg-emerald-600/20 border border-emerald-500/30 hover:bg-emerald-600/30 text-emerald-300 p-2.5 rounded-xl text-center font-medium transition text-xs"
+            >
+              <i class="fab fa-whatsapp"></i> Написать в WhatsApp
+            </a>
+            <a
+              href="https://max.ru"
+              target="_blank"
+              class="block bg-blue-600/20 border border-blue-500/30 hover:bg-blue-600/30 text-blue-300 p-2.5 rounded-xl text-center font-medium transition text-xs"
+            >
+              <i class="fa-solid fa-comments"></i> Написать в Макс
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-3 text-[11px] text-slate-500 text-center sm:text-left"
+      >
+        <p>
+          © 2026 Gemi Cargo (Геми Карго). Все права защищены. Экспедирование и
+          морские перевозки.
+        </p>
+        <p>Портовый транзитный коридор Поти • Батуми</p>
+      </div>
+    </footer>
+
+    <script>
+      // Modal Service Data mapping
+      const serviceDetails = {
+        rail: {
+          title: "Железнодорожные перевозки (Ж/Д)",
+          icon: "fa-train",
+          content: `
+                    <p class="mb-3">Компания «Геми Карго» организует регулярные отправки железнодорожным транспортом из портов Поти и Батуми по территориям Грузии, Азербайджана, России, Казахстана и стран Средней Азии.</p>
+                    <h4 class="font-bold text-white text-base mb-2">Наши возможности в Ж/Д логистике:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li>Перевалка из морских контейнеров в крытые вагоны, полувагоны и на фитинговые платформы.</li>
+                        <li>Разработка и согласование схем погрузки негабаритных и тяжеловесных грузов.</li>
+                        <li>Прямые договоры с ЖД операторами колеи 1520 мм.</li>
+                        <li>Оформление накладных СМГС (SMGS) и таможенное сопровождение.</li>
+                    </ul>
+                    <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                        <strong class="text-cyan-400">Преимущество:</strong> Позволяет существенно снизить себестоимость перевозки на дальние расстояния (в Сибирь, Казахстан, Узбекистан) по сравнению с автофурами.
+                    </div>
+                `,
+        },
+        auto: {
+          title: "Автомобильные перевозки (Грузия – Россия, СНГ)",
+          icon: "fa-truck-front",
+          content: `
+                    <p class="mb-3">Организуем оперативную доставку автомобильным транспортом любого типа из Турции через Грузию в Россию, Беларусь и страны Центральной Азии.</p>
+                    <h4 class="font-bold text-white text-base mb-2">Парк привлекаемого автотранспорта:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li>Контейнеровозы для перевозки 20ft, 40ft и 40HC морских контейнеров.</li>
+                        <li>Тентованные еврофуры (90–120 м³) для генеральных грузов.</li>
+                        <li>Рефрижераторы с соблюдением температурного режима.</li>
+                        <li>Спецавтотранспорт и тралы для негабаритного оборудования.</li>
+                    </ul>
+                    <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                        <strong class="text-emerald-400">Экспресс-сроки:</strong> Доставка из портов Турции через грузинский коридор до склада в РФ от 2-х дней!
+                    </div>
+                `,
+        },
+        sea: {
+          title: "Морской фрахт и Контейнерные линии",
+          icon: "fa-ship",
+          content: `
+                    <p class="mb-3">Прямой морской фрахт судоходными линиями в порты Поти и Батуми из ключевых мировых торговых хабов.</p>
+                    <h4 class="font-bold text-white text-base mb-2">Основное географическое покрытие:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li><strong>Турция:</strong> Стамбул, Амбарли, Мерсин, Измир, Гебзе.</li>
+                        <li><strong>Китай:</strong> Нинбо, Шанхай, Шэньчжэнь, Циндао, Гуанчжоу.</li>
+                        <li><strong>Индия & ОАЭ:</strong> Мундра, Нава-Шева, Джебель-Али.</li>
+                        <li><strong>Латинская Америка & Африка:</strong> Поставки промышленного оборудования и сырья.</li>
+                    </ul>
+                    <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                        <strong class="text-cyan-400">Сервис:</strong> Предоставление собственных и линейных контейнеров (20'DC, 40'HC, OT, FR).
+                    </div>
+                `,
+        },
+        poti: {
+          title: "Экспедирование грузов в порту Поти и Батуми",
+          icon: "fa-warehouse",
+          content: `
+                    <p class="mb-3">Внутрипортовое экспедирование — ключевое звено гарантированной безопасной транзитной перевозки.</p>
+                    <h4 class="font-bold text-white text-base mb-2">В комплект портовых услуг входит:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li>Оплата терминальных расходов (THC) и линейных сборов.</li>
+                        <li>Оформление режима таможенного транзита (ВТТ / ТТ).</li>
+                        <li>Сюрвейерский осмотр: фиксация сохранности пломб, взвешивание, фотоотчет.</li>
+                        <li>Перетарка грузов на собственных терминалах в зоне порта.</li>
+                    </ul>
+                    <div class="bg-navy-900 p-4 rounded-xl border border-slate-800">
+                        <strong class="text-amber-400">Личный контроль:</strong> Наши агенты постоянно находятся на терминалах в Поти и Батуми.
+                    </div>
+                `,
+        },
+        bulk: {
+          title: "Навалочные & Судовые партии",
+          icon: "fa-boxes-stacked",
+          content: `
+                    <p class="mb-3">Организация экспортно-импортных отправок сухих навалом и генеральных грузов судовыми партиями (Bulk / Break Bulk).</p>
+                    <h4 class="font-bold text-white text-base mb-2">Специализация:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li>Фрахтование малотоннажного и среднетоннажного флота (суда коастеры).</li>
+                        <li>Перевалка руды, минералов, строительных материалов, металлопроката, удобрений.</li>
+                        <li>Судовое агентство и стивидорные работы в Поти.</li>
+                    </ul>
+                `,
+        },
+        doortodoor: {
+          title: "Доставка «под ключ» (DOOR TO DOOR)",
+          icon: "fa-truck-ramp-box",
+          content: `
+                    <p class="mb-3">Полный комплекс сквозной логистики — мы берем на себя полную ответственность за груз с момента забора у фабрики-производителя до двери вашего склада.</p>
+                    <h4 class="font-bold text-white text-base mb-2">Что включено в услугу:</h4>
+                    <ul class="list-disc pl-5 space-y-2 mb-4">
+                        <li>Забор груза с завода в Китае, Турции или Индии.</li>
+                        <li>Морской фрахт до Грузии + Портовое экспедирование.</li>
+                        <li>Прямое согласование и нанесение стикеров маркировки ТР ТС на промежуточном терминале.</li>
+                        <li>Таможенный транзит и доставка авто/ЖД транспортом до пункта назначения.</li>
+                    </ul>
+                `,
+        },
+      };
+
+      // Modal Controls
+      function openServiceModal(key) {
+        const data = serviceDetails[key];
+        if (!data) return;
+
+        document.getElementById("modalTitle").innerText = data.title;
+        document.getElementById("modalIcon").innerHTML =
+          `<i class="fa-solid ${data.icon}"></i>`;
+        document.getElementById("modalContent").innerHTML = data.content;
+        document.getElementById("serviceModal").classList.remove("hidden");
+      }
+
+      function closeServiceModal() {
+        document.getElementById("serviceModal").classList.add("hidden");
+      }
+
+      // Calculator Logic
+      function updateCalc() {
+        const origin = document.getElementById("origin").value;
+        const dest = document.getElementById("destination").value;
+        const type = document.querySelector(
+          'input[name="transportType"]:checked',
+        ).value;
+
+        let days = "10 – 15 дней";
+        let priceText = "от $1,800";
+
+        if (origin === "China") {
+          days = "30 – 40 дней";
+          priceText = type === "20ft" ? "от $3,200" : "от $4,800";
+        } else if (origin === "Turkey") {
+          days = "5 – 9 дней";
+          priceText = type === "truck" ? "от $2,100" : "от $1,600";
+        } else if (origin === "India") {
+          days = "22 – 28 дней";
+          priceText = "от $2,900";
+        }
+
+        document.getElementById("calcDays").innerText = days;
+        document.getElementById("calcRoute").innerText =
+          `${origin} ➔ Поти/Батуми ➔ ${dest}`;
+        document.getElementById("calcPrice").innerText = priceText;
+      }
+
+      function calculateQuote(event) {
+        event.preventDefault();
+        const origin =
+          document.getElementById("origin").selectedOptions[0].text;
+        const dest =
+          document.getElementById("destination").selectedOptions[0].text;
+        const type = document.querySelector(
+          'input[name="transportType"]:checked',
+        ).value;
+        const weight = document.getElementById("cargoWeight").value;
+        const volume = document.getElementById("cargoVolume").value;
+        const contact = document.getElementById("clientContact").value;
+
+        const text =
+          `Здравствуйте, Геми Карго! Нужен расчет стоимости:\n` +
+          `📍 Откуда: ${origin}\n` +
+          `🏁 Куда: ${dest}\n` +
+          `📦 Тип: ${type}\n` +
+          `⚖️ Вес: ${weight} тонн, Объем: ${volume} м³\n` +
+          `📱 Контакт клиента: ${contact}`;
+
+        const encoded = encodeURIComponent(text);
+        window.open(`https://wa.me/995591272339?text=${encoded}`, "_blank");
+      }
+
+      function sendToMaxMessenger(event) {
+        event.preventDefault();
+        const origin =
+          document.getElementById("origin").selectedOptions[0].text;
+        const dest =
+          document.getElementById("destination").selectedOptions[0].text;
+        const type = document.querySelector(
+          'input[name="transportType"]:checked',
+        ).value;
+        const weight = document.getElementById("cargoWeight").value;
+        const volume = document.getElementById("cargoVolume").value;
+        const contact = document.getElementById("clientContact").value;
+
+        const text =
+          `Расчет стоимости от клиента через мессенджер Макс:\n` +
+          `📍 Откуда: ${origin}\n` +
+          `🏁 Куда: ${dest}\n` +
+          `📦 Тип: ${type}\n` +
+          `⚖️ Вес: ${weight} т, Объем: ${volume} м³\n` +
+          `📱 Контакт: ${contact}`;
+
+        const encoded = encodeURIComponent(text);
+        window.open(`https://max.ru?chat=${encoded}`, "_blank");
+      }
+
+      // Mobile Menu Toggle
+      function toggleMobileMenu() {
+        document.getElementById("mobileMenu").classList.toggle("hidden");
+      }
+      document
+        .getElementById("mobileMenuBtn")
+        .addEventListener("click", toggleMobileMenu);
+
+      // AI Chat Assistant Toggle
+      function toggleAIChat() {
+        document.getElementById("aiChatPanel").classList.toggle("hidden");
+      }
+
+      function sendPresetQuery(query) {
+        document.getElementById("chatInput").value = query;
+        handleUserChatMessage(new Event("submit"));
+      }
+
+      function handleUserChatMessage(e) {
+        e.preventDefault();
+        const input = document.getElementById("chatInput");
+        const message = input.value.trim();
+        if (!message) return;
+
+        const chatMessages = document.getElementById("chatMessages");
+
+        // Append User Message
+        const userMsgDiv = document.createElement("div");
+        userMsgDiv.className =
+          "bg-cyan-600/30 border border-cyan-500/40 p-3 rounded-2xl rounded-tr-none text-slate-100 ml-auto max-w-[85%]";
+        userMsgDiv.innerText = message;
+        chatMessages.appendChild(userMsgDiv);
+
+        input.value = "";
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Generate AI Response
+        setTimeout(() => {
+          let reply =
+            "Спасибо за вопрос! Вы можете написать нам в WhatsApp или через мессенджер Макс.";
+
+          const lower = message.toLowerCase();
+          if (lower.includes("срок") || lower.includes("поти")) {
+            reply =
+              "Морской транзит из Турции в Поти/Батуми занимает 2-4 дня. Автодоставка из порта Поти в РФ — еще от 2 до 4 дней в зависимости от региона назначения.";
+          } else if (lower.includes("тр тс") || lower.includes("маркировк")) {
+            reply =
+              "Мы осуществляем стикерование и маркировку ТР ТС непосредственно на терминалах Поти/Батуми перед отправкой в страны ЕАЭС.";
+          } else if (lower.includes("макс") || lower.includes("мессенджер")) {
+            reply =
+              "Для связи через мессенджер Макс вы можете воспользоваться соответствующей кнопкой вверху страницы или в калькуляторе.";
+          }
+
+          const aiMsgDiv = document.createElement("div");
+          aiMsgDiv.className =
+            "bg-navy-900 p-3 rounded-2xl rounded-tl-none border border-slate-800 text-slate-300 max-w-[85%]";
+          aiMsgDiv.innerText = reply;
+          chatMessages.appendChild(aiMsgDiv);
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+        }, 600);
+      }
+
+      // Initialize Calculator Default State
+      updateCalc();
+    </script>
+  </body>
+</html>
